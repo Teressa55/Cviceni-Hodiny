@@ -1,17 +1,55 @@
 /* Do tohoto souboru piš vlastní styly */
 
 .digitalni__dvojtecka {
-	/* Zadefinuj a zde pak použij animaci blikání */
+	animation: blikat 1s infinite;
+}
+@keyframes blikat {
+	0% {
+		opacity: 1;
+	}
+	70%{
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
 }
 
 
 /* Statický ukázkový čas 4:35:57 */
 .analogove__hodinova {
 	transform: rotate(137.5deg);
+	animation: hodinova infinite 86.4s; 
 }
 .analogove__minutova {
 	transform: rotate(215.7deg);
+	animation: minutova infinite linear 3.6s;
 }
 .analogove__vterinova {
 	transform: rotate(342deg);
+	animation: vterinova infinite linear 0.06s;
+}
+@keyframes vterinova{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(1turn);
+	}
+}
+@keyframes minutova{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(1turn);
+	}
+}
+@keyframes hodinova{
+	0%{
+		transform: rotate(137.5deg);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
 }
